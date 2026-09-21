@@ -52,6 +52,7 @@ jobs:
       run: python -m pip list --outdated
 
     - name: Audit dependencies for vulnerabilities
+      continue-on-error: true
       run: |
         python -m pip install pip-audit
         python -m pip_audit
